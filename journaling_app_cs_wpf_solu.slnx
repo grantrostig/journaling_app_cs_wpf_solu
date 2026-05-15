@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="journaling_app_cs_wpf_proj/journaling_app_cs_wpf_proj.csproj" />
+  <Project Path="whisper-cpp_clr_cpp_proj/whisper-cpp_clr_cpp_proj.vcxproj" />
+</Solution>
