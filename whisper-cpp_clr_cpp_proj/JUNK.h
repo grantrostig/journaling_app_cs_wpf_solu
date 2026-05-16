@@ -9,13 +9,13 @@ public:
 };
 
 extern "C" {
-    Junk* junk_create_instance() {
+    __declspec(dllexport) Junk* junk_create_instance() {
         return new Junk(); // TODO??: handle memory management
     }
-    int junk_add(Junk* junk, int i) {
+    __declspec(dllexport) int junk_add(Junk* junk, int i) {
         return junk->my_function(i); 
     }
-    void junk_destroy(Junk* junk) {
+    __declspec(dllexport) void junk_destroy(Junk* junk) {
         delete junk; 
     }
 }
