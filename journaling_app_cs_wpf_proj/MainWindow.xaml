@@ -9,11 +9,13 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="159,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="65" Width="121" Click="Button_Click">
-            <Button.RenderTransform>
+        <Button Content="Button" 
+                Click="Button_Click"
+                Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="159,119,0,0" 
+                VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="65" Width="121" >
+            <Button.RenderTransform> <!-- This is the RenderTransform for the button, which allows you to apply transformations such as scaling, rotation, or translation to the button. -->
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
@@ -22,6 +24,5 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-
     </Grid>
 </Window>
