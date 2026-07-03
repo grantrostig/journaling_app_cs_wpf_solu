@@ -9,9 +9,9 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyTitleAttribute(L"whispercppclrcppproj")];
 [assembly:AssemblyDescriptionAttribute(L"")];
 [assembly:AssemblyConfigurationAttribute(L"")];
-[assembly:AssemblyCompanyAttribute(L"Human-I-T")];
+[assembly:AssemblyCompanyAttribute(L"Company??")];
 [assembly:AssemblyProductAttribute(L"whispercppclrcppproj")];
-[assembly:AssemblyCopyrightAttribute(L"Copyright (c) Human-I-T 2026")];
+[assembly:AssemblyCopyrightAttribute(L"Copyright ?")];
 [assembly:AssemblyTrademarkAttribute(L"")];
 [assembly:AssemblyCultureAttribute(L"")];
 

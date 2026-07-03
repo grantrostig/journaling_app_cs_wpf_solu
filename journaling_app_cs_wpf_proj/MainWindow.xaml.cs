@@ -1,4 +1,4 @@
-﻿// #define P_INVOKE_1
+﻿#define P_INVOKE_1
 using System;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
@@ -23,6 +23,8 @@ namespace journaling_app_cs_wpf_proj {
         [ DllImport(LibraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void junk_destroy(IntPtr junk);
     }
+#if P_INVOKE_1
+#else
     public sealed class Junk_cs : IDisposable // A C# wrapper around the native Junk class, implementing IDisposable for proper cleanup
     {  // 2nd Approach: C# wrapper class that manages the native instance and provides a more C#-friendly API
         private const    int    my_int = 33;  // Example of a managed field that can be used in the wrapper class to add functionality on top of the native instance name of type is: value type
@@ -53,6 +55,7 @@ namespace journaling_app_cs_wpf_proj {
             Dispose(disposing: false); // Call the core cleanup method with disposing == false to only free unmanaged resources
         }
     }
+#endif
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -60,7 +63,7 @@ namespace journaling_app_cs_wpf_proj {
         public MainWindow() { InitializeComponent(); } // Initialize the WPF components 
 #if P_INVOKE_1
         private void Button_Click(object sender, RoutedEventArgs e) {
-            Console.WriteLine("Debug mode enabled");
+            System.Diagnostics.Debug.WriteLine(">button pressed.");
             //IntPtr junk = nint.Zero;  // TODO??: handle memory management with nint??
             IntPtr junk_handle = IntPtr.Zero;// Use IntPtr to store the handle to the native instance, which is a pointer, and we will manage its lifecycle properly.
             try {
@@ -79,7 +82,9 @@ namespace journaling_app_cs_wpf_proj {
         }
 #else
         private void Button_Click(object sender, RoutedEventArgs e) {
-            Console.WriteLine("Release mode");
+            // Console.WriteLine("Release mode");
+            System.Diagnostics.Debug.WriteLine(">button pressed.");
+
         }
 #endif
     }

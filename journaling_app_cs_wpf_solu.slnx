@@ -6,4 +6,5 @@
   </Configurations>
   <Project Path="journaling_app_cs_wpf_proj/journaling_app_cs_wpf_proj.csproj" />
   <Project Path="whisper-cpp_clr_cpp_proj/whisper-cpp_clr_cpp_proj.vcxproj" />
+  <Project Path="whisper-cpp_dll-cpp_proj/whisper-cpp_dll-cpp_proj.vcxproj" Id="00d53dc9-0871-4648-9e27-644ca516a820" />
 </Solution>
